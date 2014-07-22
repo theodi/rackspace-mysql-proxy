@@ -13,3 +13,7 @@ suites:
     run_list:
       - recipe[rackspace-mysql-proxy::default]
     attributes:
+      rackspace-mysql-proxy:
+        database: certificate
+        user: certificate
+        password: thisisafakepassword

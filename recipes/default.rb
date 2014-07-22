@@ -7,15 +7,15 @@ cnxn_info = {
   :password => 'ilikerandompasswords'
 }
 
-mysql_database 'certificate' do
+mysql_database node['rackspace-mysql-proxy']['database'] do
   connection cnxn_info
   action :create
 end
 
-mysql_database_user 'certificate' do
+mysql_database_user node['rackspace-mysql-proxy']['user'] do
   connection    cnxn_info
-  password      'thisisafakepassword'
-  database_name 'certificate'
+  password      node['rackspace-mysql-proxy']['password']
+  database_name node['rackspace-mysql-proxy']['database']
   host          '%'
   privileges    [:all]
   action        :grant
