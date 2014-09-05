@@ -2,7 +2,7 @@ include_recipe "mysql::server"
 include_recipe "database::mysql"
 
 cnxn_info = {
-  :host     => 'localhost',
+  :host     => '127.0.0.1',
   :username => 'root',
   :password => 'ilikerandompasswords'
 }
