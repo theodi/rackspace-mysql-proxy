@@ -1,4 +1,5 @@
 include_recipe "mysql::server"
+include_recipe "mysql::client" # This is manually added here because otherwise it gets installed too late on systems that include it elsewhere
 include_recipe "database::mysql"
 
 cnxn_info = {
