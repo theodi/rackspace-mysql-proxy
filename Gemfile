@@ -1,8 +1,5 @@
 source "https://rubygems.org"
 
-ruby "2.1.2"
-#ruby-gemset=rackspace-mysql-proxy
-
 gem "test-kitchen"
 gem 'kitchen-vagrant'
 gem 'kitchen-rackspace'
